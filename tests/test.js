@@ -10,7 +10,7 @@ const ScreenshotTester = require('puppeteer-screenshot-tester')
 
 describe('Launch Browwser', function () {
     it('Should be able to launch browser', async function () {
-        const loginURL = 'https://preprod-smartbox.cs109.force.com/s/login/?language=en_EN';
+        const loginURL = '<URL>';
 
         const opts = {
             logLevel: 'info',
@@ -38,7 +38,7 @@ describe('Launch Browwser', function () {
         await page.setViewport({ width: 1200, height: 900 });
         await page.goto(loginURL, { waitUntil: 'networkidle2' });
         const username = await page.$x('//input[@id="input-1"]');
-        await username[0].type('par00005789@partners.smartbox.com.preproduct');
+        await username[0].type('<username>');
         const tester = await ScreenshotTester(0.8, false, false, [], {
             transparency: 0.5
         })
@@ -52,7 +52,7 @@ describe('Launch Browwser', function () {
         //expect(result).toBe(true)
         //await page.screenshot({path: './screenshots/screenshot.png'})
         const password = await page.$x('//input[@id="input-2"]');
-        await password[0].type('SBX012347');
+        await password[0].type('<Password>');
         await page.evaluate(() => {
             document.querySelector('[class="slds-checkbox--faux terms_and_conditions_checkbox"]').click();
         });
