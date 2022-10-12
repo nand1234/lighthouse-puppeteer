@@ -15,7 +15,7 @@
     "chrome-launcher": "^0.11.2",
     "differencify": "^1.5.3",
     "fs": "0.0.1-security",
-    "lighthouse": "^5.2.0",
+    "lighthouse": "^9.6.7",
     "puppeteer": "^1.19.0",
     "request": "^2.88.0"
   },
